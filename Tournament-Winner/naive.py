@@ -18,15 +18,3 @@ def most_frequent(List):
             num = i
   
     return num
-
-
-
-
-competitions = [
-    ["HTML", "C#"],
-    ["C#", "Python"], 
-    ["Python", "HTML"],
-]
-results = [0, 0, 1]
-
-print(tournamentWinner(competitions,results))
