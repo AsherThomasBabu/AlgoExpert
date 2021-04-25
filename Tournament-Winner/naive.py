@@ -4,7 +4,7 @@ def tournamentWinner(competitions, results):
     final = []
     for i in range(len(results)):
         final.append(competitions[i][abs((results[i]-1))])
-
+        
     return most_frequent(final)
 
 def most_frequent(List):
@@ -18,3 +18,15 @@ def most_frequent(List):
             num = i
   
     return num
+
+
+
+
+competitions = [
+    ["HTML", "C#"],
+    ["C#", "Python"], 
+    ["Python", "HTML"],
+]
+results = [0, 0, 1]
+
+print(tournamentWinner(competitions,results))
