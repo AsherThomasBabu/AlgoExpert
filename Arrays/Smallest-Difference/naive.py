@@ -7,3 +7,19 @@
 # arrayOne = [-1, 5, 10, 20, 28, 3] 
 # arrayTwo = [26, 134, 135, 15, 17]
 
+# [28,26]
+
+def smallestDifference(arrayOne, arrayTwo):
+    difference = arrayTwo[0]-arrayOne[0]
+    arr = []
+
+    for i in range(len(arrayOne)):
+        for j in range(len(arrayTwo)):
+            if abs(arrayOne[i]-arrayTwo[j]) <= abs(difference):
+                difference = abs(arrayOne[i]-arrayTwo[j])
+                arr = [arrayOne[i],arrayTwo[j]]
+    return arr
+
+arrayOne = [-1, 5, 10, 20, 28, 3] 
+arrayTwo = [26, 134, 135, 15, 17]
+print(smallestDifference(arrayOne, arrayTwo))
