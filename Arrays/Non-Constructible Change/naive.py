@@ -2,6 +2,10 @@
 
 # For example, if you're given coins = [1, 2, 5], the minimum amount of change that you can't create is 4. If you're given no coins, the minimum amount of change that you can't create is 1.
 
+
+# -------------------------------------DOESN'T WORK-----------------------------------
+
+
 def nonConstructibleChange(array):
     sumChange = []
     array.append(0)
