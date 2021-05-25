@@ -21,5 +21,5 @@ def subarraySort(array):
     if res == [0,0]:
         return [-1,-1]
 
-    return res.sort()
+    return sorted(res)
     
