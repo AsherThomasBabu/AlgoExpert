@@ -9,6 +9,7 @@
 # 1 // The first non-repeating character is "b" and is found at index 1.
 
 # <---------- Runs in O(n) Time | O(n) space ---------->
+# Constant space because the hash table will never have more than 26 charecters
 
 def firstNonRepeatingCharacter(string):
     dict = {}
