@@ -4,8 +4,7 @@
 
 # To make things more complicated, however, the input string can contain all sorts of special characters, including numbers. And since encoded data must be decodable, this means that we can't naively run-length-encode long runs. For example, the run "AAAAAAAAAAAA" (12 A s), can't naively be encoded as "12A", since this string can be decoded as either "AAAAAAAAAAAA" or "1AA". Thus, long runs (runs of 10 or more characters) should be encoded in a split fashion; the aforementioned run should be encoded as "9A3A".
 
-def runLengthEncoding(string):
-    array = list(string)
+def runLengthEncoding(array):
     count = 1
     res = []
     
@@ -21,9 +20,9 @@ def runLengthEncoding(string):
             count =  1
 
     while count > 9:
-                count -= 9
-                res.append(str(9))
-                res.append(array[i])
+        count -= 9
+        res.append(str(9))
+        res.append(array[i])
 
     res.append(str(count))
     res.append(array[i])
