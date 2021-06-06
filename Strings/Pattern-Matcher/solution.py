@@ -16,18 +16,21 @@ def patternMatcher(pattern, string):
     dict,yPos = countPattern(pattern)
     strLength = len(string)
     x,y = "",""
+
     if dict["y"] == 0:
         xLen = int(strLength/dict["x"])
         x = string[:xLen]
         if foo:
                 return [y,x]
         return [x,y]
+
     for i in range(1,strLength):
         x = string[:i]
         yLen = int((strLength - i * dict["x"])/dict["y"])
         yIdx = int(yPos * i) 
         y = string[yIdx:yIdx+yLen]
         tempString = []
+
         for i in pattern:
             if i == "x":
                 tempString.append(x)
@@ -43,28 +46,34 @@ def patternMatcher(pattern, string):
 def getNewPattern(string):
     foo = True
     stringList = list(string)
+
     if stringList[0] == "x":
         foo =  False
         return stringList,foo
+
     for i in range(len(stringList)):
         if stringList[i] == "x":
             stringList[i] = "y"
         else:
             stringList[i] = "x"
+
     return stringList,foo
 
 def countPattern(array):
     yPos = 0
     dict = {"x":0,"y":0}
+
     for i in array:
         if i == "x":
             dict["x"] += 1
         else:
             dict["y"] += 1
+
     for i in range(len(array)):
         if array[i] == "y":
             yPos = i
             break
+        
     return dict,yPos
             
 print(patternMatcher("xxyxxy","gogopowerrangergogopowerranger"))
