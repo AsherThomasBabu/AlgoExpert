@@ -18,7 +18,7 @@ class LinkedList:
 
 def removeKthNodeFromEnd(head, k):
     first, second = head, head
-    for i in range(k):
+    for _ in range(k):
         first = first.next
     
     if first == None:
