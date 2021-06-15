@@ -35,6 +35,8 @@ def sumOfLinkedLists(linkedListOne, linkedListTwo):
     second = int("".join(secondNumber))
 
     third = list(first + second)
+    
+    print(third)
 
     
     
